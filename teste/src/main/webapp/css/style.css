@@ -1,12 +1,14 @@
 /* Nouveau thème moderne - Dégradé de violet et rose avec animations */
 
 :root {
-    --primary-color: #6a11cb;
-    --secondary-color: #2575fc;
-    --accent-color: #ff6b6b;
-    --text-color: #2d3436;
-    --light-bg: #f8f9fa;
-    --card-bg: rgba(255, 255, 255, 0.95);
+    --primary-color: #1a237e;  /* Bleu nuit profond */
+    --secondary-color: #0d47a1;  /* Bleu marine */
+    --accent-color: #00bcd4;  /* Turquoise vif */
+    --text-color: #263238;  /* Gris foncé */
+    --light-bg: #f5f5f5;  /* Gris très clair */
+    --card-bg: rgba(255, 255, 255, 0.97);  /* Blanc légèrement transparent */
+    --gradient-start: #1a237e;  /* Début du dégradé */
+    --gradient-end: #0d47a1;  /* Fin du dégradé */
 }
 
 @keyframes gradientBG {
@@ -19,7 +21,7 @@ body {
     font-family: 'Poppins', 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(-45deg, #6a11cb, #2575fc, #ff6b6b, #f093fb);
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     color: var(--text-color);
@@ -30,17 +32,17 @@ body {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 40px auto;
-    padding: 40px;
+    padding: 45px;
     background: var(--card-bg);
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .container:hover {
